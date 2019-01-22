@@ -4,20 +4,21 @@
         <title>Register</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="modern-normalize.css">
-        <link rel="stylesheet" href="sanitize.css">
+        <title>Travel Experts Registration Page</title>
+        <!-- <link rel="stylesheet" href="modern-normalize.css">
+        <link rel="stylesheet" href="sanitize.css"> -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aleo|ZCOOL+KuaiLe">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body class="bg">
         <header class="txt-center">
             <h1>Travel Experts Registration Page</h1>
         </header>
         <main>
             <form action="bounce.php">
-                <h3>Please enter some contact information and travel preferences:</h3><br>
-                    <div class = "float-left" width = 500px>
-                        <img class="float-right" src="Images/rebe-adelaida-293711-unsplash.jpg" width=400>
+                <h3>Please enter some contact information and travel preferences:</h3>
+                    <div class = "float-left">
+                        <img class="float-right" style ="width:40%" src="Images/rebe-adelaida-293711-unsplash.jpg">
                         <label for="lastName">Last name:</label><input type="text" id="lastName"><br>
                         <label for="firstName">First name:</label><input type="text" id="lastName"><br>
                         <label for="streetAddress">Street address:</label><input type="text" id="streetAddress"><br>
@@ -26,79 +27,32 @@
                         <label for="postalCode">Postal code:</label><input type="text" id="postalCode"><br>
                         <label for="phone #">Phone number:</label><input type="text" id="lastName"><br>
                         <label for="email">Email:</label><input type="text" id="email"><br>
+                        <label for="depDate">Departure date:</label><input type="date" id="depDate"><br>
+                        <label for="retDate">Return date:</label><input type="date" id="retDate">
                     </div>
 
                     <div class="float-left" class="div clear">
                         Please select your travel destinations:<br>
-                        <input type="checkbox" name="Europe" value="Europe" width="30px">Europe<br>
-                        <input type="checkbox" name="Caribbean" value="Caribbean">Caribbean<br>
-                        <input type="checkbox" name="South America" value="South America">South America<br>
-                        <input type="checkbox" name="Africa" value="Africa">Africa<br>
-                        <input type="checkbox" name="Asia" value="Asia">Asia<br>
-                        <input type="checkbox" name="Australia" value="Australia">Australia<br>
-                        <input type="checkbox" name="Other" value="Other">Other<br>
+                        <input class="w50" type="checkbox" name="Europe" value="Europe">Europe<br>
+                        <input class="w50" type="checkbox" name="Caribbean" value="Caribbean">Caribbean<br>
+                        <input class="w50" type="checkbox" name="South America" value="South America">South America<br>
+                        <input class="w50" type="checkbox" name="Africa" value="Africa">Africa<br>
+                        <input class="w50" type="checkbox" name="Asia" value="Asia">Asia<br>
+                        <input class="w50" type="checkbox" name="Australia" value="Australia">Australia<br>
+                        <input class="w50" type="checkbox" name="Other" value="Other">Other<br>
                     </div>
-
                     <div class="float-right">
                             <label>Comments or Questions:</label>
                             <textarea class="float-right" cols="30" rows="10" name="questions">Comments or questions here...</textarea>
-                    </div>      
-                    <br class="clear">
-                    <div class="float-left" width = "30%" height= "400px" class="float-left">
-                        <p class="float-left">Please enter your preferred travel dates:</p>
-                        <label for="depDate">Departure date:</label><input type="date" id="depDate"><br>
-                        <label for="retDate">Return date:</label><input type="date" id="retDate">
                     </div>
-                    
-                 <!-- 
-                    <select name="destinations">
-                        <option value="Caribbean">Caribbean</option>
-                        <option value="Europe">Europe</option>
-                        <option value="South America">South America</option>
-                        <option value="Africa">Africa</option>
-                        <option value="Far East">Far East</option>
-                        </select>
-                        <br>
-                        <br>
-                        
-                        <label for ="animalSelect">Choose an animal.</label>
-                        <select id="animalSelect">
-                            <option value="cat">cat</option>
-                            <option value="rhinoceros">rhinoceros</option>
-                            <option value="orangutan">orangutan</option>
-                            <option value="bat">bat</option>
-                            <option value="dromedary">dromedary</option>
-                            </select>
-                            <br>
-                            <br>
-                    
-                       
-                        <select size ="3" name="animals">
-                                <option value="cat">cat</option>
-                                <option value="rhinoceros">rhinoceros</option>
-                                <option value="orangutan">orangutan</option>
-                                <option value="bat">bat</option>
-                                <option value="dromedary">dromedary</option>
-                        </select>
-                        <br>
-                        <br>
-                      
-                       <select size ="3" name="animals">
-                            <option value="cat">cat</option>
-                            <option value="rhinoceros">rhinoceros</option>
-                            <option value="orangutan">orangutan</option>
-                            <option value="bat">bat</option>
-                            <option value="dromedary">dromedary</option>
-                        </select>
-                    <br>
-                    <br>-->
-
-                    <input type="submit">
-                    <br>
-                    <input type="reset">           
+                    <div class="div50">   
+                        <button id="myResetBtn" style="width:75px">RESET</button><br>
+                        <button id="mySubmitBtn" style="width:75px">SUBMIT</button><br>
+                    </div>         
             </form>
-            <a href="index.html" target="_parent">Return to main page</a>
+            <a href="index.html" target="_parent">Return to Travel Experts Main Page</a>
         </main>
+        <script src="script.js"></script>
     </body>
 
     <footer>&copy; Copyright 2019 Travel Experts</footer>

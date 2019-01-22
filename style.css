@@ -7,14 +7,32 @@ table {
     color: blue;
     font-family: Arial, sans-serif;
 } */
+a {
+    font-family: 'Aleo', serif;
+    margin: auto;
+    width: 200px;
+    font-size: 24px;
+    text-align: center;
+}
 body {
     color: black;
-    background-color: lightblue;
+    background-color: lightblue; 
     font-family: 'Aleo', serif;
     height: 100%;
     box-sizing: border-box;
     text-align: center;
 }
+button {
+    font-family: 'Aleo', serif;
+    margin: 1px;
+    width: 200px;
+    padding: 2px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
 div {
     text-align: left;
     margin: 20px;
@@ -25,18 +43,24 @@ footer {
     font-size: 24px;
     font-style: italic;
     color: black;
-    margin: 26px;
+    margin: 5px;
     text-align: left;
 }
 form {
     margin: auto;
     width: 75%;
-    /*background-color: grey;*/
+    height: 800px;
+    background-color: red;
     font-size: 20px;
 }
 header {
     color: black;
     font-family: 'Aleo', serif;
+}
+h1 {
+    color: black;
+    font-family: 'Aleo', serif;
+    font-size: 40px; 
 }
 html {
     height: 100%;
@@ -49,10 +73,11 @@ img {
     width: 33%;
 }
 input {
+    font-family: 'Aleo', serif;
     margin: 1px;
     width: 200px;
     padding: 2px;
-    text-align: left;
+    text-align: center;
     border: 1px solid black;
     border-radius: 4px;
     font-size: 18px;
@@ -71,7 +96,7 @@ main {
     font-family: 'Aleo', serif;
 }
 nav {
-    /*background-color: red;*/
+    background-color: red;
     width: 80%;
     display: inline-block;
     text-align: center;
@@ -125,6 +150,7 @@ p {
 }
 .div-50 {
     position: relative;
+    background-color:red;
     display: inline-block;
     text-align:center;
     box-sizing: border-box;
@@ -159,6 +185,7 @@ p {
     border-color:white;
     border-style: solid;
     border-width: 2px;
+    margin: auto;
 }
 .img-container-50 {
     box-sizing: border-box;
@@ -175,7 +202,7 @@ p {
     float: left;
     clear: left;
     width : 175px;
-    font-size: 20px;
+    font-size: 26px;
 }
 .page-header {
     font-family: 'Aleo', serif;
@@ -207,18 +234,33 @@ p {
 .txt-center {
     text-align: center;
 }
+.w50 {
+    width: 50px;
+}
 a:link {
     color:black;
 }
-*a:visited {
+a:visited {
     color:darkgreen;
 }
-a:hover, a:focus {
-    color:yellow;
-    border-color: yellow;
+a:hover {
+    border-color: purple;
+    color: purple;
+}
+a:focus {
+    border-color: purple;
+    color: purple;
 }
 a:active {
     color:purple;
+}
+a img:hover {
+    border-color: purple;
+    color: purple;
+}
+a label:hover {
+    border-color: purple;
+    color: purple;
 }
 p::first-letter {
     font-size: 150%;
