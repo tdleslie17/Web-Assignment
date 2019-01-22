@@ -50,7 +50,7 @@ form {
     margin: auto;
     width: 75%;
     height: 800px;
-    background-color: red;
+ /*   background-color: red; */
     font-size: 20px;
 }
 header {
@@ -238,10 +238,10 @@ p {
     width: 50px;
 }
 a:link {
-    color:black;
+    color:purple;
 }
 a:visited {
-    color:darkgreen;
+    color: black;
 }
 a:hover {
     border-color: purple;
@@ -261,12 +261,6 @@ a img:hover {
 a label:hover {
     border-color: purple;
     color: purple;
-}
-p::first-letter {
-    font-size: 150%;
-}
-p::first-line {
-    font-size: 80%;
 }
 p::selection {
     color: red;
