@@ -25,7 +25,7 @@ if (pageBody.id == "contactPg") {
     newTable.style.columnWidth = '20%';
     newTable.style.fontSize ='26px';
 
-    var newImg1  = document.createElement('img');
+    /*var newImg1  = document.createElement('img');
     newImg1.src  ="Images/185489-unsplash-edit.jpg";
     var newImg2  = document.createElement('img');
     newImg2.src  ="Images/465339-unsplash-edit.jpg";
@@ -33,7 +33,8 @@ if (pageBody.id == "contactPg") {
     newImg3.src  ="Images/jason-zeis-328638-unsplash.jpg";
     var newImg4  = document.createElement('img');
     newImg4.src  ="Images/300912-unsplash-edit.jpg";
-    var imgArr   = [newImg1, newImg2, newImg3, newImg4];
+    var imgArr   = [newImg1, newImg2, newImg3, newImg4]; */
+    var imgArr   = ["Images/185489-unsplash-edit.jpg", "Images/465339-unsplash-edit.jpg", "Images/jason-zeis-328638-unsplash.jpg","Images/300912-unsplash-edit.jpg"];
     var desArr   = ['Turks and Caicos', 'Bahamas', 'Greece', 'Getaway'];
 
     var numElements = 4;
@@ -41,7 +42,9 @@ if (pageBody.id == "contactPg") {
         var newRow   = document.createElement('tr');
         var newData1  = document.createElement('td');
         var newData2  = document.createElement('td');
-        newData1.appendChild(imgArr[i]);
+        var newImg   = document.createElement('img');
+        newImg.src = imgArr[i];
+        newData1.appendChild(newImg);
         newData2.textContent = desArr[i];
         newRow.appendChild(newData1);
         newRow.appendChild(newData2);
@@ -53,8 +56,23 @@ if (pageBody.id == "contactPg") {
 
 if (pageBody.id == 'regPg') {
 
+
     console.log("I'm on the registration page now!");
 
+    //Set up variables for form validation code block
+    var plastName = document.getElementById('p_lastName');
+    plastName.style.display = "none";
+
+    //Code for validation of user information fields
+    var l_lastName = document.getElementById("lastName");
+    l_lastName.addEventListener("focus", function(event) {
+        event.preventDefault();
+        plastName.style.display = "block";
+    });
+    l_lastName.addEventListener("blur", function(event) {
+        event.preventDefault();
+        plastName.style.display = "none";
+    });
     var regReset  = document.getElementById("myResetBtn");
     var regSubmit = document.getElementById("mySubmitBtn");
 

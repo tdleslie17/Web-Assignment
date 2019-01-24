@@ -17,15 +17,15 @@
         <main>
             <form action="bounce.php" name="infoForm">
                 <h3>Please enter some contact information and travel preferences:</h3>
-                    <div class = "float-left">
-                        <img class="float-right" style ="width:40%" src="Images/rebe-adelaida-293711-unsplash.jpg">
-                        <label for="lastName">Last name:</label><input type="text" id="lastName"><br>
-                        <label for="firstName">First name:</label><input type="text" id="lastName"><br>
+                    <div class = "float-left" style="width:80%">
+                        <!-- <img class="float-right" style ="width:40%" src="Images/rebe-adelaida-293711-unsplash.jpg"> -->
+                        <label for="lastName">Last name:</label><input type="text" id="lastName"><p class="float-right" id="p_lastName"> Please enter your last name.</p><br>
+                        <label for="firstName">First name:</label><input type="text" id="firstName"><br>
                         <label for="streetAddress">Street address:</label><input type="text" id="streetAddress"><br>
-                        <label for="city">City:</label><input type="text" id="streetNumber"><br>
+                        <label for="city">City:</label><input type="text" id="city"><br>
                         <label for="province">Province:</label><input type="text" id="province"><br>
                         <label for="postalCode">Postal code:</label><input type="text" id="postalCode"><br>
-                        <label for="phone #">Phone number:</label><input type="text" id="lastName"><br>
+                        <label for="phone #">Phone number:</label><input type="text" id="phoneNumber"><br>
                         <label for="email">Email:</label><input type="text" id="email"><br>
                         <label for="depDate">Departure date:</label><input type="date" id="depDate"><br>
                         <label for="retDate">Return date:</label><input type="date" id="retDate">
@@ -45,7 +45,7 @@
                             <label>Comments or Questions:</label>
                             <textarea class="float-right" cols="30" rows="10" name="questions">Comments or questions here...</textarea>
                     </div>
-                    <div class="div50">   
+                    <div class="div50" class="float-left">   
                         <button id="myResetBtn" style="width:75px">RESET</button><br>
                         <button id="mySubmitBtn" style="width:75px">SUBMIT</button><br>
                     </div>         
