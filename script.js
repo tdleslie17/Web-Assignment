@@ -10,8 +10,6 @@ if (pageBody.id == "contactPg") {
 
     var newText1 = document.createTextNode('Image.');
     var newText2 = document.createTextNode('Description.');
-    var newText3 = document.createTextNode('Here is some more text.');
-
 
     var newTable = document.createElement('table');
     var newHeader1   = document.createElement('th');
@@ -25,6 +23,7 @@ if (pageBody.id == "contactPg") {
     newRow1.appendChild(newHeader2);
     newTable.appendChild(newRow1);
     newTable.style.columnWidth = '20%';
+    newTable.style.fontSize ='26px';
 
     var newImg1  = document.createElement('img');
     newImg1.src  ="Images/185489-unsplash-edit.jpg";
@@ -32,10 +31,13 @@ if (pageBody.id == "contactPg") {
     newImg2.src  ="Images/465339-unsplash-edit.jpg";
     var newImg3  = document.createElement('img');
     newImg3.src  ="Images/jason-zeis-328638-unsplash.jpg";
-    var imgArr   = [newImg1, newImg2, newImg3];
-    var desArr   = ['Turks and Caicos', 'Bahamas', 'Greece'];
+    var newImg4  = document.createElement('img');
+    newImg4.src  ="Images/300912-unsplash-edit.jpg";
+    var imgArr   = [newImg1, newImg2, newImg3, newImg4];
+    var desArr   = ['Turks and Caicos', 'Bahamas', 'Greece', 'Getaway'];
 
-    for (var i = 0; i < 3; i++) {
+    var numElements = 4;
+    for (var i = 0; i < numElements; i++) {
         var newRow   = document.createElement('tr');
         var newData1  = document.createElement('td');
         var newData2  = document.createElement('td');
@@ -44,8 +46,7 @@ if (pageBody.id == "contactPg") {
         newRow.appendChild(newData1);
         newRow.appendChild(newData2);
         newTable.appendChild(newRow);          
-    }
-     
+    }    
     var divElem = document.getElementsByTagName('div')[0];
     divElem.appendChild(newTable);
 }
