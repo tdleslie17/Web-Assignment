@@ -62,6 +62,24 @@ if (pageBody.id == 'regPg') {
     //Set up variables for form validation code block
     var plastName = document.getElementById('p_lastName');
     plastName.style.display = "none";
+    var pfirstName = document.getElementById('p_firstName');
+    pfirstName.style.display = "none";
+    var pstreetAddress = document.getElementById('p_streetAddress');
+    pstreetAddress.style.display = "none";
+    var pcity = document.getElementById('p_city');
+    pcity.style.display = "none";
+    var pprovince = document.getElementById('p_province');
+    pprovince.style.display = "none";
+    var ppostalCode = document.getElementById('p_postalCode');
+    ppostalCode.style.display = "none";
+    var pphoneNumber = document.getElementById('p_phoneNumber');
+    pphoneNumber.style.display = "none";
+    var pemail = document.getElementById('p_email');
+    pemail.style.display = "none";
+    var pdepDate = document.getElementById('p_depDate');
+    pdepDate.style.display = "none";
+    var pretDate = document.getElementById('p_retDate');
+    pretDate.style.display = "none";
 
     //Code for validation of user information fields
     var l_lastName = document.getElementById("lastName");
@@ -73,6 +91,88 @@ if (pageBody.id == 'regPg') {
         event.preventDefault();
         plastName.style.display = "none";
     });
+
+    var l_firstName = document.getElementById("firstName");
+    l_firstName.addEventListener("focus", function(event) {
+        event.preventDefault();
+        pfirstName.style.display = "block";
+    });
+    l_firstName.addEventListener("blur", function(event) {
+        event.preventDefault();
+        pfirstName.style.display = "none";
+    });
+    
+    var l_streetAddress = document.getElementById("streetAddress");
+    l_streetAddress.addEventListener("focus", function(event) {
+        event.preventDefault();
+        pstreetAddress.style.display = "block";
+    });
+    l_streetAddress.addEventListener("blur", function(event) {
+        event.preventDefault();
+        pstreetAddress.style.display = "none";
+    });
+    
+    var l_city = document.getElementById("city");
+    l_city.addEventListener("focus", function(event) {
+        event.preventDefault();
+        pcity.style.display = "block";
+    });
+    l_city.addEventListener("blur", function(event) {
+        event.preventDefault();
+        pcity.style.display = "none";
+    });
+    
+    var l_province = document.getElementById("province");
+    l_province.addEventListener("focus", function(event) {
+        event.preventDefault();
+        pprovince.style.display = "block";
+    });
+    l_province.addEventListener("blur", function(event) {
+        event.preventDefault();
+        pprovince.style.display = "none";
+    });
+    
+    var l_postalCode = document.getElementById("postalCode");
+    l_postalCode.addEventListener("focus", function(event) {
+        event.preventDefault();
+        ppostalCode.style.display = "block";
+    });
+    l_postalCode.addEventListener("blur", function(event) {
+        event.preventDefault();
+        ppostalCode.style.display = "none";
+    });
+    
+    var l_phoneNumber = document.getElementById("phoneNumber");
+    l_phoneNumber.addEventListener("focus", function(event) {
+        event.preventDefault();
+        pphoneNumber.style.display = "block";
+    });
+    l_phoneNumber.addEventListener("blur", function(event) {
+        event.preventDefault();
+        pphoneNumber.style.display = "none";
+    });
+    
+    var l_email = document.getElementById("email");
+    l_email.addEventListener("focus", function(event) {
+        event.preventDefault();
+        pemail.style.display = "block";
+    });
+    l_email.addEventListener("blur", function(event) {
+        event.preventDefault();
+        pemail.style.display = "none";
+    });
+    
+    var l_depDate = document.getElementById("depDate");
+    l_depDate.addEventListener("focus", function(event) {
+        event.preventDefault();
+        pdepDate.style.display = "block";
+    });
+    l_depDate.addEventListener("blur", function(event) {
+        event.preventDefault();
+        pdepDate.style.display = "none";
+    });
+
+
     var regReset  = document.getElementById("myResetBtn");
     var regSubmit = document.getElementById("mySubmitBtn");
 
