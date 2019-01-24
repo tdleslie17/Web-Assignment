@@ -65,7 +65,6 @@ if (pageBody.id == "contactPg") {
     newTable.appendChild(newRow4);
    
     var divElem = document.getElementsByTagName('div')[0];
-    divElem.appendChild(newPara);
     divElem.appendChild(newTable);
 
 
