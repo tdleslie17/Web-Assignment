@@ -30,30 +30,37 @@ if (pageBody.id == "contactPg") {
     var urlArr   = ['https://www.tripadvisor.ca/Tourism-g147395-Turks_and_Caicos-Vacations.html', 'https://www.bahamas.com/',
                     'http://www.visitgreece.gr/', 'https://www.westjet.com/en-ca/index'];
 
-    var numElements = 4;
-    for (var i = 0; i < imgArr.length; i++) {
+    for (let i = 0; i < imgArr.length; i++) {
         var newRow    = document.createElement('tr');
         var newData1  = document.createElement('td');
         var newData2  = document.createElement('td');
         var newImg    = document.createElement('img');
-        newImg.src = imgArr[i];
-        newImg.id ="Img"+i;
-        console.log(newImg.id);
+        newImg.src    = imgArr[i];
+        //console.log(urlArr[i]);
+        newImg.addEventListener("click", function(event) {
+            var temp_window = window.open(urlArr[i]);
+            console.log(urlArr[i]);
+            setTimeout(closeWindow, 3000);
+            function closeWindow() {
+                temp_window.close();
+            }
+        });
         newData1.appendChild(newImg);
         newData2.textContent = desArr[i];
         newRow.appendChild(newData1);
         newRow.appendChild(newData2);
-        newTable.appendChild(newRow);          
+        newTable.appendChild(newRow);
+        
+        function closeWindow() {
+            temp_window.close();
+        }
     }    
     var divElem = document.getElementsByTagName('div')[0];
     divElem.appendChild(newTable);
 }
 
 if (pageBody.id == 'regPg') {
-
-
     console.log("I'm on the registration page now!");
-
     //Set up variables for form validation code block
     var plastName = document.getElementById('p_lastName');
     plastName.style.display = "none";
