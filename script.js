@@ -25,25 +25,20 @@ if (pageBody.id == "contactPg") {
     newTable.style.columnWidth = '20%';
     newTable.style.fontSize ='26px';
 
-    /*var newImg1  = document.createElement('img');
-    newImg1.src  ="Images/185489-unsplash-edit.jpg";
-    var newImg2  = document.createElement('img');
-    newImg2.src  ="Images/465339-unsplash-edit.jpg";
-    var newImg3  = document.createElement('img');
-    newImg3.src  ="Images/jason-zeis-328638-unsplash.jpg";
-    var newImg4  = document.createElement('img');
-    newImg4.src  ="Images/300912-unsplash-edit.jpg";
-    var imgArr   = [newImg1, newImg2, newImg3, newImg4]; */
     var imgArr   = ["Images/185489-unsplash-edit.jpg", "Images/465339-unsplash-edit.jpg", "Images/jason-zeis-328638-unsplash.jpg","Images/300912-unsplash-edit.jpg"];
     var desArr   = ['Turks and Caicos', 'Bahamas', 'Greece', 'Getaway'];
+    var urlArr   = ['https://www.tripadvisor.ca/Tourism-g147395-Turks_and_Caicos-Vacations.html', 'https://www.bahamas.com/',
+                    'http://www.visitgreece.gr/', 'https://www.westjet.com/en-ca/index'];
 
     var numElements = 4;
-    for (var i = 0; i < numElements; i++) {
-        var newRow   = document.createElement('tr');
+    for (var i = 0; i < imgArr.length; i++) {
+        var newRow    = document.createElement('tr');
         var newData1  = document.createElement('td');
         var newData2  = document.createElement('td');
-        var newImg   = document.createElement('img');
+        var newImg    = document.createElement('img');
         newImg.src = imgArr[i];
+        newImg.id ="Img"+i;
+        console.log(newImg.id);
         newData1.appendChild(newImg);
         newData2.textContent = desArr[i];
         newRow.appendChild(newData1);
@@ -200,6 +195,7 @@ if (pageBody.id == 'regPg') {
             console.log("Default behaviour blocked"); 
         }
     });
+    
     regSubmit.addEventListener("click", function(event) {
         event.preventDefault();
         var cnfReset = confirm("Are you sure you want to submit?");
