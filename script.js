@@ -204,14 +204,58 @@ if (pageBody.id == 'regPg') {
         event.preventDefault();
         var cnfReset = confirm("Are you sure you want to submit?");
         if (cnfReset) {
-            //Proceed with submit code.
-            console.log("Proceed with submit code.");
-            document.infoForm.submit();
+            if (checkForm()) {
+                //Proceed with submit code.
+                console.log("Proceed with submit code.");
+                document.infoForm.submit();
+            }
+            else {
+                alert("Default behaviour blocked");
+                console.log("Default behaviour blocked"); 
+            }
         }
         else {
             alert("Default behaviour blocked");
             console.log("Default behaviour blocked"); 
         }
     });
+    function checkForm () {
+        if (!(document.infoForm.lastName)) {
+            return false;
+        }
+        if (!(document.infoForm.firstName)) {
+            return false;
+        }
+        if (!document.infoForm.streetAddress) {
+            return false;
+        }
+        if (!document.infoForm.city) {
+            return false;
+        }
+        if (!document.infoForm.province) {
+            return false;
+        }
+        if (!document.infoForm.postalCode) {
+            return false;
+        }
+        /*else if !(/^[A-Z]\d[A-Z]?\d[A-Z]\d$/.test(!document.infoForm.lastName.value)) {
+            console.log('Postal code in wrong format');
+            return false;
+    }*/
+        if (!document.infoForm.phoneNumber) {
+            return false;
+        }
+        if (!document.infoForm.email) {
+            return false;
+        }
+        if (!document.infoForm.depDate) {
+            return false;
+        }
+        if (!document.infoForm.retDate) {
+            return false;
+        }
+        return true;
+    }
 }
+
 
