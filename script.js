@@ -85,7 +85,7 @@ if (pageBody.id == 'regPg') {
     var l_lastName = document.getElementById("lastName");
     l_lastName.addEventListener("focus", function(event) {
         event.preventDefault();
-        plastName.style.display = "block";
+        plastName.style.display = "inline";
     });
     l_lastName.addEventListener("blur", function(event) {
         event.preventDefault();
@@ -95,7 +95,7 @@ if (pageBody.id == 'regPg') {
     var l_firstName = document.getElementById("firstName");
     l_firstName.addEventListener("focus", function(event) {
         event.preventDefault();
-        pfirstName.style.display = "block";
+        pfirstName.style.display = "inline";
     });
     l_firstName.addEventListener("blur", function(event) {
         event.preventDefault();
@@ -105,7 +105,7 @@ if (pageBody.id == 'regPg') {
     var l_streetAddress = document.getElementById("streetAddress");
     l_streetAddress.addEventListener("focus", function(event) {
         event.preventDefault();
-        pstreetAddress.style.display = "block";
+        pstreetAddress.style.display = "inline";
     });
     l_streetAddress.addEventListener("blur", function(event) {
         event.preventDefault();
@@ -115,7 +115,7 @@ if (pageBody.id == 'regPg') {
     var l_city = document.getElementById("city");
     l_city.addEventListener("focus", function(event) {
         event.preventDefault();
-        pcity.style.display = "block";
+        pcity.style.display = "inline";
     });
     l_city.addEventListener("blur", function(event) {
         event.preventDefault();
@@ -125,7 +125,7 @@ if (pageBody.id == 'regPg') {
     var l_province = document.getElementById("province");
     l_province.addEventListener("focus", function(event) {
         event.preventDefault();
-        pprovince.style.display = "block";
+        pprovince.style.display = "inline";
     });
     l_province.addEventListener("blur", function(event) {
         event.preventDefault();
@@ -135,7 +135,7 @@ if (pageBody.id == 'regPg') {
     var l_postalCode = document.getElementById("postalCode");
     l_postalCode.addEventListener("focus", function(event) {
         event.preventDefault();
-        ppostalCode.style.display = "block";
+        ppostalCode.style.display = "inline";
     });
     l_postalCode.addEventListener("blur", function(event) {
         event.preventDefault();
@@ -145,7 +145,7 @@ if (pageBody.id == 'regPg') {
     var l_phoneNumber = document.getElementById("phoneNumber");
     l_phoneNumber.addEventListener("focus", function(event) {
         event.preventDefault();
-        pphoneNumber.style.display = "block";
+        pphoneNumber.style.display = "inline";
     });
     l_phoneNumber.addEventListener("blur", function(event) {
         event.preventDefault();
@@ -155,7 +155,7 @@ if (pageBody.id == 'regPg') {
     var l_email = document.getElementById("email");
     l_email.addEventListener("focus", function(event) {
         event.preventDefault();
-        pemail.style.display = "block";
+        pemail.style.display = "inline";
     });
     l_email.addEventListener("blur", function(event) {
         event.preventDefault();
@@ -165,11 +165,21 @@ if (pageBody.id == 'regPg') {
     var l_depDate = document.getElementById("depDate");
     l_depDate.addEventListener("focus", function(event) {
         event.preventDefault();
-        pdepDate.style.display = "block";
+        pdepDate.style.display = "inline";
     });
     l_depDate.addEventListener("blur", function(event) {
         event.preventDefault();
         pdepDate.style.display = "none";
+    });
+
+    var l_retDate = document.getElementById("retDate");
+    l_retDate.addEventListener("focus", function(event) {
+        event.preventDefault();
+        pretDate.style.display = "inline";
+    });
+    l_retDate.addEventListener("blur", function(event) {
+        event.preventDefault();
+        pretDate.style.display = "none";
     });
 
 
