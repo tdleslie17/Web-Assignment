@@ -32,7 +32,7 @@ div {
 div input {
     box-sizing: border-box;
     width:40%;
-    margin: 5px;
+    margin: 4px;
     height: 26px;
 }
 div label {
@@ -44,9 +44,10 @@ div label {
 }
 div p {
     box-sizing: border-box;
+    color: red;
     float:right;
     font-size:14px;
-    text-align: center;
+    text-align: left;
     width: 35%;
     display: inline-block;
     position: relative;
@@ -329,16 +330,47 @@ table td img:hover {
         left: 40%;
     }
     div p {
-        font-size: 16px;
+        font-size: 15px;
     }
     div label {
-        font-size: 16px;
+        font-size: 15px;
     }
     div input {
         font-size: 16px;
+        height: 23px;
     }
 }
-
+@media screen and (max-width:750px) {
+    .label-white {
+        color: white;
+        margin: 1px;
+        display: inline-block;
+        float: left;
+        clear: left;
+        width : 175px;
+        font-size: 20px;
+    }
+    .top-left {
+        position: absolute;
+        top: 5%;
+        left: -10%;
+    }
+    .top-right {
+        position: absolute;
+        top: 5%;
+        left: 40%;
+    }
+    div p {
+        font-size: 12px;
+    }
+    div label {
+        font-size: 12px;
+    }
+    div input {
+        font-size: 16px;
+        height: 19px;
+    }
+}
 @media screen and (max-width:600px) {
     .label-white {
         color: white;
@@ -367,6 +399,7 @@ table td img:hover {
     }
     div input {
         font-size: 12px;
+        height: 20px;
     }
 }
 @media screen and (max-width:350px) {
