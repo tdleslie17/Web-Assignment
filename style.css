@@ -298,3 +298,67 @@ a label:hover {
 p::selection {
     color: red;
 }
+@media screen and (max-width:992px) {
+    .label-white {
+        color: white;
+        margin: 1px;
+        display: inline-block;
+        float: left;
+        clear: left;
+        width : 175px;
+        font-size: 20px;
+    }
+    .top-left {
+        position: absolute;
+        top: 5%;
+        left: -10%;
+    }
+    .top-right {
+        position: absolute;
+        top: 5%;
+        left: 40%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .label-white {
+        color: white;
+        margin: 1px;
+        display: inline-block;
+        float: left;
+        clear: left;
+        width : 175px;
+        font-size: 14px;
+    }
+    .top-left {
+        position: absolute;
+        top: 5%;
+        left: -25%;
+    }
+    .top-right {
+        position: absolute;
+        top: 5%;
+        left: 25%;
+    }
+}
+@media screen and (max-width:350px) {
+    .label-white {
+        color: white;
+        margin: 1px;
+        display: inline-block;
+        float: left;
+        clear: left;
+        width : 175px;
+        font-size: 8px;
+    }
+    .top-left {
+        position: absolute;
+        top: 5%;
+        left: -50%;
+    }
+    .top-right {
+        position: absolute;
+        top: 5%;
+        left: -10%;
+    }
+}
