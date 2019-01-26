@@ -1,16 +1,8 @@
-/*footer {
-    background-color: red;
-    font: Arial;
-}
-table {
-    background-color: lightblue;
-    color: blue;
-    font-family: Arial, sans-serif;
-} */
 a {
     font-family: 'Aleo', serif;
-    margin: auto;
-    width: 200px;
+/*  margin: auto;
+    width: 200px; 
+    width: 100%; */
     font-size: 24px;
     text-align: center;
 }
@@ -41,25 +33,23 @@ div input {
     box-sizing: border-box;
     width:40%;
     margin: 5px;
+    height: 26px;
 }
 div label {
-
     float: left;
     width: 20%;
     margin: 5px;
-    background-color: green;
-    font-size:14px;
+/*    background-color: green; */
+    font-size:18px;
 }
 div p {
     box-sizing: border-box;
     float:right;
     font-size:14px;
     text-align: center;
-
     width: 35%;
     display: inline-block;
     position: relative;
-    background-color: green;
 }
 div ul {
     font-size: 24px;
@@ -87,7 +77,8 @@ header {
 h1 {
     color: black;
     font-family: 'Aleo', serif;
-    font-size: 40px; 
+    font-size: 40px;
+    margin: 40px;
 }
 html {
     height: 100%;
@@ -135,14 +126,17 @@ p {
     font-family: 'Aleo', serif;
     font-size: 20px;
 }
-table {
-    margin: 15%;
-    column-width: 200px;
-}
 td {
-    text-align: left;
-    font-size: 18px;
+    width: 50%;
+    text-align: center;
+    font-size: 24px;
 }
+th {
+    width: 50%;
+    text-align: center;
+    font-size: 24px;
+}
+
 #address {
     color: brown;
     font-size: 24px;
@@ -213,7 +207,7 @@ td {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 30%;
 }
 .img-container-33 {
     box-sizing: border-box;
@@ -232,13 +226,21 @@ td {
     border-style: solid;
     border-width: 2px;
 }
-.label-white {
+/*.label-white {
     color: white;
     margin: 1px;
     display: inline-block;
     float: left;
     clear: left;
     width : 175px;
+    font-size: 26px;
+}*/
+.label-white {
+    color:white;
+    margin: 1px;
+    display: inline-block;
+    box-sizing: border-box;
+    width : 25%;
     font-size: 26px;
 }
 .page-header {
@@ -261,12 +263,12 @@ td {
 .top-left {
     position: absolute;
     top: 5%;
-    left: -5%;
+    left: 0%; 
 }
 .top-right {
     position: absolute;
     top: 5%;
-    left: 45%;
+    left: 50%; 
 }
 .txt-center {
     text-align: center;
@@ -302,6 +304,10 @@ a label:hover {
 p::selection {
     color: red;
 }
+table td img:hover {
+    border-color: purple;
+    color: purple;
+}
 @media screen and (max-width:992px) {
     .label-white {
         color: white;
@@ -321,6 +327,15 @@ p::selection {
         position: absolute;
         top: 5%;
         left: 40%;
+    }
+    div p {
+        font-size: 16px;
+    }
+    div label {
+        font-size: 16px;
+    }
+    div input {
+        font-size: 16px;
     }
 }
 
@@ -344,6 +359,15 @@ p::selection {
         top: 5%;
         left: 25%;
     }
+    div p {
+        font-size: 12px;
+    }
+    div label {
+        font-size: 12px;
+    }
+    div input {
+        font-size: 12px;
+    }
 }
 @media screen and (max-width:350px) {
     .label-white {
@@ -364,5 +388,14 @@ p::selection {
         position: absolute;
         top: 5%;
         left: -10%;
+    }
+    div p {
+        font-size: 6px;
+    }
+    div label {
+        font-size: 6px;
+    }
+    div input {
+        font-size: 6px;
     }
 }

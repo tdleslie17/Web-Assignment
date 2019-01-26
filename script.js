@@ -8,22 +8,26 @@ if (pageBody.id == 'mainPg') {
 if (pageBody.id == "contactPg") {
     console.log("I'm on the contact page now!");
 
-    var newText1 = document.createTextNode('Image.');
-    var newText2 = document.createTextNode('Description.');
+    var newText1 = document.createTextNode('Images');
+    var newText2 = document.createTextNode('Descriptions');
 
     var newTable = document.createElement('table');
+    newTable.style.width       = "100%";
+ /*   netTable.style.columnWidth = "40%";*/
     var newHeader1   = document.createElement('th');
     var newHeader2   = document.createElement('th');
-    var newData1     = document.createElement('td');
-    var newData2     = document.createElement('td');
-    newHeader1.textContent = 'Image';
-    newHeader2.textContent = 'Description';
+
+/*    newHeader1.textContent = 'Image';
+    newHeader2.textContent = 'Description'; */
+    newHeader1.appendChild(newText1);
+    newHeader2.appendChild(newText2);
+
     var newRow1   = document.createElement('tr');
+ /*   newRow1.style.columnWidth = "40%"; */
     newRow1.appendChild(newHeader1);
     newRow1.appendChild(newHeader2);
     newTable.appendChild(newRow1);
-    newTable.style.columnWidth = '20%';
-    newTable.style.fontSize ='26px';
+
 
     var imgArr   = ["Images/185489-unsplash-edit.jpg", "Images/465339-unsplash-edit.jpg", "Images/jason-zeis-328638-unsplash.jpg","Images/300912-unsplash-edit.jpg"];
     var desArr   = ['Turks and Caicos', 'Bahamas', 'Greece', 'Getaway'];
@@ -34,14 +38,14 @@ if (pageBody.id == "contactPg") {
         var newRow    = document.createElement('tr');
         var newData1  = document.createElement('td');
         var newData2  = document.createElement('td');
+
         var newImg    = document.createElement('img');
         newImg.src    = imgArr[i];
 
-        //console.log(urlArr[i]);
         newImg.addEventListener("click", function(event) {
             var temp_window = window.open(urlArr[i]);
             console.log(urlArr[i]);
-            setTimeout(closeWindow, 3000);
+            setTimeout(closeWindow, 5000);
             function closeWindow() {
                 temp_window.close();
             }
