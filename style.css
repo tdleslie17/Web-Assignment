@@ -38,7 +38,7 @@ div {
     margin: 20px;
 }
 div input {
-    width: 40%;
+    width:40%;
     margin: 5px;
 }
 div label {
@@ -49,14 +49,18 @@ div label {
 div p {
     float:right;
     font-size:14px;
-    text-align: left;
+    text-align: center;
     margin: 5px;
-    width: 40%;
+    width: 35%;
     display: inline-block;
     position: relative;
     top: 7px;
+    background-color: green;
 }
-
+div ul {
+    font-size: 24px;
+    text-align: left;
+}
 footer {
     font-family: 'Aleo', serif;
     font-size: 24px;
@@ -126,6 +130,14 @@ p {
     color: black;
     font-family: 'Aleo', serif;
     font-size: 20px;
+}
+table {
+    margin: 15%;
+    column-width: 200px;
+}
+td {
+    text-align: left;
+    font-size: 18px;
 }
 #address {
     color: brown;

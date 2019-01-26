@@ -36,6 +36,7 @@ if (pageBody.id == "contactPg") {
         var newData2  = document.createElement('td');
         var newImg    = document.createElement('img');
         newImg.src    = imgArr[i];
+
         //console.log(urlArr[i]);
         newImg.addEventListener("click", function(event) {
             var temp_window = window.open(urlArr[i]);
@@ -55,7 +56,7 @@ if (pageBody.id == "contactPg") {
             temp_window.close();
         }
     }    
-    var divElem = document.getElementsByTagName('div')[0];
+    var divElem = document.getElementsByTagName('div')[1];
     divElem.appendChild(newTable);
 }
 
@@ -184,11 +185,9 @@ if (pageBody.id == 'regPg') {
         pretDate.style.display = "none";
     });
 
-
     var regReset  = document.getElementById("myResetBtn");
     var regSubmit = document.getElementById("mySubmitBtn");
-
-    
+   
     regReset.addEventListener("click", function(event) {
         event.preventDefault();
         var cnfReset = confirm("Are you sure you want to reset?");
@@ -260,5 +259,3 @@ if (pageBody.id == 'regPg') {
         return true;
     }
 }
-
-
