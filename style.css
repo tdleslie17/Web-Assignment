@@ -38,23 +38,27 @@ div {
     margin: 20px;
 }
 div input {
+    box-sizing: border-box;
     width:40%;
     margin: 5px;
 }
 div label {
+
     float: left;
     width: 20%;
     margin: 5px;
+    background-color: green;
+    font-size:14px;
 }
 div p {
+    box-sizing: border-box;
     float:right;
     font-size:14px;
     text-align: center;
-    margin: 5px;
+
     width: 35%;
     display: inline-block;
     position: relative;
-    top: 7px;
     background-color: green;
 }
 div ul {
