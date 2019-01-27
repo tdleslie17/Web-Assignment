@@ -3,11 +3,9 @@
    Course:              CPRG 210 Web Application Development
    Assignment:          Final Assignment                         */
 
+/* Element tag styles are largely self-explanatory */
 a {
     font-family: 'Aleo', serif;
-/*  margin: auto;
-    width: 200px; 
-    width: 100%; */
     font-size: 24px;
     text-align: center;
 }
@@ -32,7 +30,6 @@ button {
     border-radius: 4px;
     font-size: 18px;
 }
-
 div {
     text-align: left;
     margin: 20px;
@@ -47,7 +44,6 @@ div label {
     float: left;
     width: 20%;
     margin: 5px;
-/*    background-color: green; */
     font-size:18px;
 }
 div p {
@@ -75,7 +71,6 @@ form {
     margin: auto;
     width: 75%;
     height: 800px;
- /*   background-color: red; */
     font-size: 20px;
 }
 header {
@@ -124,7 +119,6 @@ main {
     font-family: 'Aleo', serif;
 }
 nav {
-    background-color: red;
     width: 80%;
     display: inline-block;
     text-align: center;
@@ -152,6 +146,11 @@ th {
 }
 #cnctPar {
     font-size: 24px;
+}
+#plane {
+    position: absolute;
+    left: 0;
+    z-index: 10; /* positions plane image above screen contents - optional */
 }
 .a-container {
     width: 50%;
@@ -192,7 +191,6 @@ th {
 }
 .div-50 {
     position: relative;
-    background-color:red;
     display: inline-block;
     text-align:center;
     box-sizing: border-box;
@@ -311,6 +309,8 @@ div table td img:hover {
     border-color: purple;
     color: purple;
 }
+
+/* Media queries designed to handle font scaling */
 @media screen and (max-width:992px) {
     .label-white {
         color: white;
@@ -350,6 +350,7 @@ div table td img:hover {
     div table th {
         font-size: 16px;
     }
+    
     li {
         font-size: 16px;  
     }
@@ -360,11 +361,7 @@ div table td img:hover {
         font-size: 16px;  
     }
 }
-    #plane {
-        position: absolute;
-        left: 0;
-        z-index: 10;
-    }
+    
 @media screen and (max-width:750px) {
     .label-white {
         color: white;
@@ -400,6 +397,9 @@ div table td img:hover {
     }
     div table th {
         font-size: 12px;
+    }
+    footer {
+        font-size: 16px;
     }
     li {
         font-size: 12px;  

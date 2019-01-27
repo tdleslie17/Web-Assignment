@@ -368,7 +368,7 @@ if (pageBody.id == 'regPg') {
                 document.infoForm.submit();
             }
             else {
-                alert("All information fields must be filled out.");
+                alert("Did not submit - all information fields must be filled out.");
                 // Console diagnostic message: console.log("Default behaviour blocked");
                 // Console diagnostic message: console.log("Some input fields missing."); 
             }
@@ -379,6 +379,7 @@ if (pageBody.id == 'regPg') {
         }
         
     });
+    
     // Function to check if each of the information fields has been filled out.
     // If not filled, function returns 'false'.
     // Also, function checks if postal code input is formatted correctly.
