@@ -60,6 +60,7 @@ if (pageBody.id == 'mainPg') {
 
 
 if (pageBody.id == "contactPg") {
+    document.body.style.backgroundImage = "none";
     console.log("I'm on the contact page now!");
 
     var newText1 = document.createTextNode('Images');
@@ -92,7 +93,6 @@ if (pageBody.id == "contactPg") {
         var newRow    = document.createElement('tr');
         var newData1  = document.createElement('td');
         var newData2  = document.createElement('td');
-
         var newImg    = document.createElement('img');
         newImg.src    = imgArr[i];
 
@@ -120,6 +120,7 @@ if (pageBody.id == "contactPg") {
 
 if (pageBody.id == 'regPg') {
     console.log("I'm on the registration page now!");
+    document.body.style.backgroundImage = "none";
     //Set up variables for form validation code block
     var plastName = document.getElementById('p_lastName');
     plastName.style.display = "none";
@@ -302,10 +303,10 @@ if (pageBody.id == 'regPg') {
         if (!document.infoForm.postalCode.value) {
             return false;
         }
-        /*else if !(/^[A-Z]\d[A-Z]?\d[A-Z]\d$/.test(!document.infoForm.lastName.value)) {
+        else if (!(/^[A-Z]\d[A-Z]?\d[A-Z]\d$/.test(!document.infoForm.postalCode.value))) {
             console.log('Postal code in wrong format');
             return false;
-    }*/
+        }
         if (!document.infoForm.phoneNumber.value) {
             return false;
         }
