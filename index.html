@@ -15,17 +15,25 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body id="mainPg" class="bg">
+        <!-- Create image tag for plane animation -->
         <img id = "plane" src = "Images/airplane.png" style="width: 10%;">
+        
         <header class="page-header">
+            <!-- Set up company logo and h1 title -->
             <img class="img-center" src="Images/travel2.png">
             <h1 class="txt-center">Welcome to Travel Experts</h1>
-           
+
+            <!-- Use a div container to hold three horizontally aligned travel images
+            Use image container classes to scale images proportionately and enable RWD. -->
             <div class="div-80">
                 <img class="img-container-33" src="Images/465339-unsplash-edit.jpg">
                 <img class="img-container-33" src="Images/185489-unsplash-edit.jpg">
                 <img class="img-container-33" src="Images/jason-zeis-328638-unsplash.jpg">
             </div>
         </header>
+        <!-- Use a div container to hold two horizontally aligned travel images.
+            Use image container classes to scale images proportionately and enable RWD.
+            Images are nested in <a> tags to enable links to the other web site pages. --> 
         <div class="div-50">
             <a  href="register.html" target="_blank">
                 <img class="img-container-50" src="Images/edgar-chaparro-143297-unsplash.jpg"> 
@@ -35,7 +43,8 @@
                 <img class="img-container-50" src="Images/luca-micheli-422053-unsplash.jpg">
                 <label class="top-right label-white">Contact</label>
             </a>
-        </div>   
+        </div>
+        <!-- Copyright image and text as per specification -->   
         <footer>&copy; Copyright 2019 Travel Experts</footer>
         <script src="script.js"></script>
     </body>

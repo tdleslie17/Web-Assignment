@@ -21,6 +21,11 @@
         <main style="box-sizing: border-box;">
             <form action="bouncer.php" name="infoForm" autocomplete="off">
                 <h3 style="text-align: left">Please enter some contact information and travel preferences:</h3>
+
+                    <!-- Create a div element to contain rows of label, input, and paragraph elements. The input and 
+                    paragraph elements in each row have unique ids which allow for access using JavaScript. When an input
+                    field is in focus, the corresponding paragraph description will be revealed. Otherwise it will
+                    be hidden. -->
                     <div class = "float-left" style="box-sizing: border-box; width:100%;">
                         <label for="lastName">Last name:</label><input type="text" id="lastName"><p id="p_lastName">Please enter your last name.</p>
                         <label for="firstName">First name:</label><input type="text" id="firstName"><p id="p_firstName">Please enter your first name.</p>
@@ -34,6 +39,7 @@
                         <label for="retDate">Return date:</label><input type="date" id="retDate"><p id="p_retDate">Please enter your return date.</p>
                     </div>
 
+                    <!-- Create a div element to contain various travel choices in a checkbox. -->
                     <div class="float-left" class="div clear">
                         Please select your travel destinations:<br>
                         <input class="w50" type="checkbox" name="Europe" value="Europe">Europe<br>
@@ -44,6 +50,9 @@
                         <input class="w50" type="checkbox" name="Australia" value="Australia">Australia<br>
                         <input class="w50" type="checkbox" name="Other" value="Other">Other<br>
                     </div>
+
+                    <!-- Create a div element to contain reste and submit buttons. These button elements are id'd
+                    to allow later access by Javascript. -->
                     <div style="clear: both; display: block; text-align: center" class="div50">   
                         <button id="myResetBtn" style="width:75px">RESET</button><br>
                         <button id="mySubmitBtn" style="width:75px">SUBMIT</button><br>

@@ -51,7 +51,6 @@ if (pageBody.id == 'mainPg') {
             plane.style.top = plane.offsetTop - 1 + "px";
         }
         if ((!flyForwards) && (flyDownwards)) {
-            console.log('flying down and backwards');
             plane.style.transform = "scaleX(-1) rotate(30deg)";
         }
         if (!(flyForwards) && (!(flyDownwards))) {
@@ -183,7 +182,6 @@ if (pageBody.id == "contactPg") {
                 plane.style.top = plane.offsetTop - 1 + "px";
             }
             if ((!flyForwards) && (flyDownwards)) {
-                console.log('flying down and backwards');
                 plane.style.transform = "scaleX(-1) rotate(30deg)";
             }
             if (!(flyForwards) && (!(flyDownwards))) {
@@ -379,7 +377,7 @@ if (pageBody.id == 'regPg') {
         }
         
     });
-    
+
     // Function to check if each of the information fields has been filled out.
     // If not filled, function returns 'false'.
     // Also, function checks if postal code input is formatted correctly.

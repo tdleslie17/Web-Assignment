@@ -14,11 +14,13 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body id = "contactPg" style = "width: 100%;">
+        <!-- Create image tag for plane animation -->
         <img id = "plane" src = "Images/airplane.png" style="width: 10%;">
         <header class="txt-center">
             <h1>Travel Experts Contact Information</h1>
         </header>
-        <main>           
+        <main>
+            <!-- Create a div container for company contact information. Width is % of body width. -->
             <div style="float: left; width: 40%; font-size: 20px;">
                 <p id="cnctPar" style = "float:left; width: 70%; text-align: left">
                     1000 100 Avenue<br>
@@ -29,6 +31,7 @@
                     <br><br><br>
                     Our Travel Experts:
                 </p>
+                <!-- Nested lists used to display travel experts' contact information. -->
                 <ul style="float:left; width: 100%;">
                     <li>Meg Meganson
                         <ul>
@@ -51,7 +54,7 @@
                 </ul>
             </div>
             <div class="float-left" style="width:50%;">
-                <!-- Target for new table -->
+                <!-- Target div container for new table to be created using JS -->
             </div>
         </main>
         <script src="script.js"></script>
