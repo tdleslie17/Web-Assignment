@@ -1,3 +1,8 @@
+// Author:              Tim Leslie
+// Date Last Modified:  January 27, 2019.
+// Course:              CPRG 210 Web Application Development
+// Assignment:          Final Assignment
+
 var pageBody = document.getElementsByTagName('body')[0];
 
 if (pageBody.id == 'mainPg') {
@@ -7,8 +12,8 @@ if (pageBody.id == 'mainPg') {
     
     var flyForwards   = true;
     var flyDownwards = true;
-    plane.style.transform = "scaleX(-1)";
-    plane.style.transform = "rotate(30deg)";
+    plane.style.transform = "scaleX(-1) rotate(30deg)";
+ //   plane.style.transform = "rotate(30deg)";
     var planeTimer = setInterval(planeFly, 10);
 
 
@@ -25,7 +30,7 @@ if (pageBody.id == 'mainPg') {
         else {
             plane.style.left = plane.offsetLeft - 1 + "px";
         }
-        if (plane.offsetTop >= 750 - plane.offsetHeight) {
+        if (plane.offsetTop >= document.body.offsetHeight - plane.offsetHeight) {
             flyDownwards = false;
         }
         if (plane.offsetTop <= 0) {
@@ -37,24 +42,20 @@ if (pageBody.id == 'mainPg') {
         else {
             plane.style.top = plane.offsetTop - 1 + "px";
         }
-        if (!(flyForwards) && (flyDownwards)) {
-            plane.style.transform = "rotate(-30deg)";
-            plane.style.transform = "scaleX(-1)";
+        if ((!flyForwards) && (flyDownwards)) {
+            console.log('flying down and backwards');
+            plane.style.transform = "scaleX(-1) rotate(30deg)";
         }
         if (!(flyForwards) && (!(flyDownwards))) {
-            plane.style.transform = "rotate(-30deg)";
-            plane.style.transform = "scaleX(-1)";
+            plane.style.transform = "rotate(15deg) scaleX(-1)";
         }
         if ((flyForwards) && (flyDownwards)) {
-            plane.style.transform = "scaleX(-1)";
-            plane.style.transform = "rotate(30deg)";
+            plane.style.transform = "scaleX(1) rotate(30deg)";
         }
         if ((flyForwards) && !(flyDownwards)) {
-            plane.style.transform = "scaleX(-1)";
-            plane.style.transform = "rotate(-20deg)";
+            plane.style.transform = "scaleX(1) rotate(-20deg)";
         }
     }
-
 }
 
 
@@ -270,47 +271,51 @@ if (pageBody.id == 'regPg') {
             }
             else {
                 alert("Default behaviour blocked");
-                console.log("Default behaviour blocked"); 
+                console.log("Default behaviour blocked");
+                console.log("Some input fields missing."); 
+ 
             }
         }
         else {
             alert("Default behaviour blocked");
             console.log("Default behaviour blocked"); 
         }
+        
     });
     function checkForm () {
-        if (!(document.infoForm.lastName)) {
+        if (!(document.infoForm.lastName.value)) {
+            console.log((document.infoForm.lastName));
             return false;
         }
-        if (!(document.infoForm.firstName)) {
+        if (!(document.infoForm.firstName.value)) {
             return false;
         }
-        if (!document.infoForm.streetAddress) {
+        if (!document.infoForm.streetAddress.value) {
             return false;
         }
-        if (!document.infoForm.city) {
+        if (!document.infoForm.city.value) {
             return false;
         }
-        if (!document.infoForm.province) {
+        if (!document.infoForm.province.value) {
             return false;
         }
-        if (!document.infoForm.postalCode) {
+        if (!document.infoForm.postalCode.value) {
             return false;
         }
         /*else if !(/^[A-Z]\d[A-Z]?\d[A-Z]\d$/.test(!document.infoForm.lastName.value)) {
             console.log('Postal code in wrong format');
             return false;
     }*/
-        if (!document.infoForm.phoneNumber) {
+        if (!document.infoForm.phoneNumber.value) {
             return false;
         }
-        if (!document.infoForm.email) {
+        if (!document.infoForm.email.value) {
             return false;
         }
-        if (!document.infoForm.depDate) {
+        if (!document.infoForm.depDate.value) {
             return false;
         }
-        if (!document.infoForm.retDate) {
+        if (!document.infoForm.retDate.value) {
             return false;
         }
         return true;

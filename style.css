@@ -1,3 +1,8 @@
+/* Author:              Tim Leslie
+   Date Last Modified:  January 27, 2019.
+   Course:              CPRG 210 Web Application Development
+   Assignment:          Final Assignment                         */
+   
 a {
     font-family: 'Aleo', serif;
 /*  margin: auto;
@@ -7,6 +12,7 @@ a {
     text-align: center;
 }
 body {
+    background-image: url("Images/web-page-background-clouds.png");
     color: black;
     background-color: lightblue; 
     font-family: 'Aleo', serif;
