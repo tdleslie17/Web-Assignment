@@ -271,10 +271,9 @@ if (pageBody.id == 'regPg') {
                 document.infoForm.submit();
             }
             else {
-                alert("Default behaviour blocked");
+                alert("All information fields must be filled out.");
                 console.log("Default behaviour blocked");
                 console.log("Some input fields missing."); 
- 
             }
         }
         else {
@@ -303,8 +302,9 @@ if (pageBody.id == 'regPg') {
         if (!document.infoForm.postalCode.value) {
             return false;
         }
-        else if (!(/^[A-Z]\d[A-Z]?\d[A-Z]\d$/.test(!document.infoForm.postalCode.value))) {
+        else if (!(/^[A-Z]\d[A-Z] ?\d[A-Z]\d$/.test(document.infoForm.postalCode.value))) {
             console.log('Postal code in wrong format');
+            alert("Postal code should be in 'A1A 1A1' format");
             return false;
         }
         if (!document.infoForm.phoneNumber.value) {
