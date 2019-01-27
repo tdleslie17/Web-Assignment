@@ -6,16 +6,24 @@
 var pageBody = document.getElementsByTagName('body')[0];
 
 if (pageBody.id == 'mainPg') {
-    console.log("I'm on the main page now!");
+    // Code for the main page.
+    // Diagnostic code line: console.log("I'm on the main page now!");
 
+    // Code for airplane animation.
     var plane = document.getElementById('plane');
     
+    // Initialize the plane orientation and movement.
+    plane.style.transform = "scaleX(-1) rotate(30deg)";
     var flyForwards   = true;
     var flyDownwards = true;
-    plane.style.transform = "scaleX(-1) rotate(30deg)";
- //   plane.style.transform = "rotate(30deg)";
+
+    // Set interval timer to call planeFly function
     var planeTimer = setInterval(planeFly, 10);
 
+    // This function handles the movement logic for the plane image.
+    // Boolean variables, flyForwards and flyBackwards, track the current direction of motion.
+    // The plane will 'reflect' off vertical boundaries, and change its pitch by using
+    // the transform property.
 
     function planeFly() {
         if (plane.offsetLeft >= document.body.offsetWidth - plane.offsetWidth) {
@@ -58,36 +66,43 @@ if (pageBody.id == 'mainPg') {
     }
 }
 
-
 if (pageBody.id == "contactPg") {
+    // Code for the contacts page.
     document.body.style.backgroundImage = "none";
-    console.log("I'm on the contact page now!");
+    // Diagnostic consloe message: console.log("I'm on the contact page now!");
 
+    // Create text elements for the table header elements.
     var newText1 = document.createTextNode('Images');
     var newText2 = document.createTextNode('Descriptions');
 
+    // Create a table element ans style it.
     var newTable = document.createElement('table');
     newTable.style.width       = "100%";
- /*   netTable.style.columnWidth = "40%";*/
+
+    // Create table header elements and append text elements.
     var newHeader1   = document.createElement('th');
     var newHeader2   = document.createElement('th');
-
-/*    newHeader1.textContent = 'Image';
-    newHeader2.textContent = 'Description'; */
     newHeader1.appendChild(newText1);
     newHeader2.appendChild(newText2);
 
+    // Create a table row element and append the table headers to it.
     var newRow1   = document.createElement('tr');
- /*   newRow1.style.columnWidth = "40%"; */
     newRow1.appendChild(newHeader1);
     newRow1.appendChild(newHeader2);
     newTable.appendChild(newRow1);
 
-
+    // Declare and assign arrays for image files, image descriptions, and relevant web page links, respectively.
     var imgArr   = ["Images/185489-unsplash-edit.jpg", "Images/465339-unsplash-edit.jpg", "Images/jason-zeis-328638-unsplash.jpg","Images/300912-unsplash-edit.jpg"];
     var desArr   = ['Turks and Caicos', 'Bahamas', 'Greece', 'Getaway'];
     var urlArr   = ['https://www.tripadvisor.ca/Tourism-g147395-Turks_and_Caicos-Vacations.html', 'https://www.bahamas.com/',
                     'http://www.visitgreece.gr/', 'https://www.westjet.com/en-ca/index'];
+
+
+    // Set up a loop to append row (data) elements to the table. the loop
+    // will iterate through all elements of the input arrays and build the table
+    // content elements successively. The sequence starts with data elements,
+    // appends these to a table row element, and then finally appends the row element
+    // to the table element.
 
     for (let i = 0; i < imgArr.length; i++) {
         var newRow    = document.createElement('tr');
@@ -96,32 +111,46 @@ if (pageBody.id == "contactPg") {
         var newImg    = document.createElement('img');
         newImg.src    = imgArr[i];
 
+        // Add an event listener to the table images.
+        // If clicked, a relevant web page link is opened.
         newImg.addEventListener("click", function(event) {
             var temp_window = window.open(urlArr[i]);
             console.log(urlArr[i]);
-            setTimeout(closeWindow, 5000);
+            setTimeout(closeWindow, 5000); // Westjet page slow to open, so 5 seconds selected.
             function closeWindow() {
                 temp_window.close();
             }
         });
+
+        // Append image to a data element and append description to a data element.
         newData1.appendChild(newImg);
         newData2.textContent = desArr[i];
+
+        // Append these data elements to a table row.
         newRow.appendChild(newData1);
         newRow.appendChild(newData2);
+
+        // Append the table row to the table.
         newTable.appendChild(newRow);
         
+        // Function to close the temporary web page windows.
         function closeWindow() {
             temp_window.close();
         }
     }    
-    var divElem = document.getElementsByTagName('div')[1];
+    var divElem = document.getElementsByTagName('div')[1]; // Obtain the second div on the page.
     divElem.appendChild(newTable);
 }
 
 if (pageBody.id == 'regPg') {
-    console.log("I'm on the registration page now!");
+
+    // Code for the registration page.
+
     document.body.style.backgroundImage = "none";
-    //Set up variables for form validation code block
+
+    // Set up variables for the form validation code block.
+    // Declare variables for each paragraph element identified by 'id'.
+    // and set the display visibility to 'none'.
     var plastName = document.getElementById('p_lastName');
     plastName.style.display = "none";
     var pfirstName = document.getElementById('p_firstName');
@@ -143,7 +172,11 @@ if (pageBody.id == 'regPg') {
     var pretDate = document.getElementById('p_retDate');
     pretDate.style.display = "none";
 
-    //Code for validation of user information fields
+    // Code for validation of user information fields.
+    // Set an event listener for focus on each of the input fields.
+    // Once an input element has focus, display its corresponding paragraph message. 
+    // When the input field is 'blur'd, hide the paragraph message.
+
     var l_lastName = document.getElementById("lastName");
     l_lastName.addEventListener("focus", function(event) {
         event.preventDefault();
@@ -244,23 +277,30 @@ if (pageBody.id == 'regPg') {
         pretDate.style.display = "none";
     });
 
+    
+    
+    // Code to deal with the Reset and Submit buttons.
+
+    // Declare variables to obtain the button elements.
     var regReset  = document.getElementById("myResetBtn");
     var regSubmit = document.getElementById("mySubmitBtn");
    
+    // Add 'click' event listener to Reset button.
     regReset.addEventListener("click", function(event) {
         event.preventDefault();
-        var cnfReset = confirm("Are you sure you want to reset?");
+        var cnfReset = confirm("Are you sure you want to reset?"); // Make sure user wants to reset.
         if (cnfReset) {
-            //Proceed with reset code.
-            console.log("Proceed with reset code.");
+            // Proceed with reset code
+            // Diagnostic message for testing: console.log("Proceed with reset code.");
             document.infoForm.reset();
         }
         else {
-            alert("Default behaviour blocked");
+            alert("Will not reset the information fields.");
             console.log("Default behaviour blocked"); 
         }
     });
-    
+
+    // Add 'click' event listener to Submit button.
     regSubmit.addEventListener("click", function(event) {
         event.preventDefault();
         var cnfReset = confirm("Are you sure you want to submit?");
@@ -272,8 +312,8 @@ if (pageBody.id == 'regPg') {
             }
             else {
                 alert("All information fields must be filled out.");
-                console.log("Default behaviour blocked");
-                console.log("Some input fields missing."); 
+                // Console diagnostic message: console.log("Default behaviour blocked");
+                // Console diagnostic message: console.log("Some input fields missing."); 
             }
         }
         else {
@@ -282,6 +322,10 @@ if (pageBody.id == 'regPg') {
         }
         
     });
+    // Function to check if each of the information fields has been filled out.
+    // If not filled, function returns 'false'.
+    // Also, function checks if postal code input is formatted correctly.
+    // if not formatted properly, an alert message is sent to the user.
     function checkForm () {
         if (!(document.infoForm.lastName.value)) {
             console.log((document.infoForm.lastName));
@@ -302,6 +346,7 @@ if (pageBody.id == 'regPg') {
         if (!document.infoForm.postalCode.value) {
             return false;
         }
+        // Use a regular expression to check that postal code is in 'A1A 1A1' format.
         else if (!(/^[A-Z]\d[A-Z] ?\d[A-Z]\d$/.test(document.infoForm.postalCode.value))) {
             console.log('Postal code in wrong format');
             alert("Postal code should be in 'A1A 1A1' format");
