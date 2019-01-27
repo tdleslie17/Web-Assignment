@@ -2,6 +2,59 @@ var pageBody = document.getElementsByTagName('body')[0];
 
 if (pageBody.id == 'mainPg') {
     console.log("I'm on the main page now!");
+
+    var plane = document.getElementById('plane');
+    
+    var flyForwards   = true;
+    var flyDownwards = true;
+    plane.style.transform = "scaleX(-1)";
+    plane.style.transform = "rotate(30deg)";
+    var planeTimer = setInterval(planeFly, 10);
+
+
+    function planeFly() {
+        if (plane.offsetLeft >= document.body.offsetWidth - plane.offsetWidth) {
+            flyForwards = false;
+        }
+        if (plane.offsetLeft <= 20) {
+            flyForwards = true;
+        }
+        if (flyForwards) {
+            plane.style.left = plane.offsetLeft + 1 + "px";
+        }
+        else {
+            plane.style.left = plane.offsetLeft - 1 + "px";
+        }
+        if (plane.offsetTop >= 750 - plane.offsetHeight) {
+            flyDownwards = false;
+        }
+        if (plane.offsetTop <= 0) {
+            flyDownwards = true;
+        }
+        if (flyDownwards) {
+            plane.style.top = plane.offsetTop + 1 + "px";
+        }
+        else {
+            plane.style.top = plane.offsetTop - 1 + "px";
+        }
+        if (!(flyForwards) && (flyDownwards)) {
+            plane.style.transform = "rotate(-30deg)";
+            plane.style.transform = "scaleX(-1)";
+        }
+        if (!(flyForwards) && (!(flyDownwards))) {
+            plane.style.transform = "rotate(-30deg)";
+            plane.style.transform = "scaleX(-1)";
+        }
+        if ((flyForwards) && (flyDownwards)) {
+            plane.style.transform = "scaleX(-1)";
+            plane.style.transform = "rotate(30deg)";
+        }
+        if ((flyForwards) && !(flyDownwards)) {
+            plane.style.transform = "scaleX(-1)";
+            plane.style.transform = "rotate(-20deg)";
+        }
+    }
+
 }
 
 
