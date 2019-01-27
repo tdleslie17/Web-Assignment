@@ -2,7 +2,7 @@
    Date Last Modified:  January 27, 2019.
    Course:              CPRG 210 Web Application Development
    Assignment:          Final Assignment                         */
-   
+
 a {
     font-family: 'Aleo', serif;
 /*  margin: auto;
@@ -13,12 +13,14 @@ a {
 }
 body {
     background-image: url("Images/web-page-background-clouds.png");
+    background-size: cover;
     color: black;
     background-color: lightblue; 
     font-family: 'Aleo', serif;
-    height: 100%;
     box-sizing: border-box;
     text-align: center;
+    width: 100%;
+    height: 100%;
 }
 button {
     font-family: 'Aleo', serif;
@@ -50,7 +52,6 @@ div label {
 }
 div p {
     box-sizing: border-box;
-    color: red;
     float:right;
     font-size:14px;
     text-align: left;
@@ -149,6 +150,9 @@ th {
     font-size: 24px;
     font-family: "ZCOOL Kuaile", cursive;
 }
+#cnctPar {
+    font-size: 24px;
+}
 .a-container {
     width: 50%;
     box-sizing: border-box;
@@ -233,15 +237,6 @@ th {
     border-style: solid;
     border-width: 2px;
 }
-/*.label-white {
-    color: white;
-    margin: 1px;
-    display: inline-block;
-    float: left;
-    clear: left;
-    width : 175px;
-    font-size: 26px;
-}*/
 .label-white {
     color:white;
     margin: 1px;
@@ -311,7 +306,8 @@ a label:hover {
 p::selection {
     color: red;
 }
-table td img:hover {
+div table td img:hover {
+    border-style: solid;
     border-color: purple;
     color: purple;
 }
@@ -335,6 +331,9 @@ table td img:hover {
         top: 5%;
         left: 40%;
     }
+    a {
+        font-size: 16px;  
+    }
     div p {
         font-size: 15px;
     }
@@ -344,6 +343,21 @@ table td img:hover {
     div input {
         font-size: 16px;
         height: 23px;
+    }
+    div table td {
+        font-size: 16px;
+    }
+    div table th {
+        font-size: 16px;
+    }
+    li {
+        font-size: 16px;  
+    }
+    li a {
+        font-size: 16px;  
+    }
+    #cnctPar {
+        font-size: 16px;  
     }
 }
     #plane {
@@ -381,6 +395,21 @@ table td img:hover {
         font-size: 16px;
         height: 19px;
     }
+    div table td {
+        font-size: 12px;
+    }
+    div table th {
+        font-size: 12px;
+    }
+    li {
+        font-size: 12px;  
+    }
+    li a {
+        font-size: 12px;  
+    }
+    #cnctPar {
+        font-size: 12px;  
+    }
 }
 @media screen and (max-width:600px) {
     .label-white {
@@ -406,7 +435,7 @@ table td img:hover {
         font-size: 12px;
     }
     div label {
-        font-size: 12px;
+        font-size: 9px;
     }
     div input {
         font-size: 12px;

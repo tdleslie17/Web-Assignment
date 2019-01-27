@@ -67,8 +67,8 @@ if (pageBody.id == 'mainPg') {
 }
 
 if (pageBody.id == "contactPg") {
+
     // Code for the contacts page.
-    document.body.style.backgroundImage = "none";
     // Diagnostic consloe message: console.log("I'm on the contact page now!");
 
     // Create text elements for the table header elements.
@@ -140,7 +140,64 @@ if (pageBody.id == "contactPg") {
     }    
     var divElem = document.getElementsByTagName('div')[1]; // Obtain the second div on the page.
     divElem.appendChild(newTable);
-}
+
+        // Code for airplane animation.
+        var plane = document.getElementById('plane');
+    
+        // Initialize the plane orientation and movement.
+        plane.style.transform = "scaleX(-1) rotate(30deg)";
+        var flyForwards   = true;
+        var flyDownwards = true;
+    
+        // Set interval timer to call planeFly function
+        var planeTimer = setInterval(planeFly, 10);
+    
+        // This function handles the movement logic for the plane image.
+        // Boolean variables, flyForwards and flyBackwards, track the current direction of motion.
+        // The plane will 'reflect' off vertical boundaries, and change its pitch by using
+        // the transform property.
+    
+        function planeFly() {
+            if (plane.offsetLeft >= document.body.offsetWidth - plane.offsetWidth) {
+                flyForwards = false;
+            }
+            if (plane.offsetLeft <= 20) {
+                flyForwards = true;
+            }
+            if (flyForwards) {
+                plane.style.left = plane.offsetLeft + 1 + "px";
+            }
+            else {
+                plane.style.left = plane.offsetLeft - 1 + "px";
+            }
+            if (plane.offsetTop >= document.body.offsetHeight - plane.offsetHeight) {
+                flyDownwards = false;
+            }
+            if (plane.offsetTop <= 0) {
+                flyDownwards = true;
+            }
+            if (flyDownwards) {
+                plane.style.top = plane.offsetTop + 1 + "px";
+            }
+            else {
+                plane.style.top = plane.offsetTop - 1 + "px";
+            }
+            if ((!flyForwards) && (flyDownwards)) {
+                console.log('flying down and backwards');
+                plane.style.transform = "scaleX(-1) rotate(30deg)";
+            }
+            if (!(flyForwards) && (!(flyDownwards))) {
+                plane.style.transform = "rotate(15deg) scaleX(-1)";
+            }
+            if ((flyForwards) && (flyDownwards)) {
+                plane.style.transform = "scaleX(1) rotate(30deg)";
+            }
+            if ((flyForwards) && !(flyDownwards)) {
+                plane.style.transform = "scaleX(1) rotate(-20deg)";
+            }
+        }
+    }
+
 
 if (pageBody.id == 'regPg') {
 
